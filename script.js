@@ -32,7 +32,7 @@ $(".btn").on("click", function (e) {
 //getting current city data
 
 function currentWeatherData(city) {
-    var queryUrl = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&apikey=f7cd9e34cec45ab16fa8240fea00b0b7"
+    var queryUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&apikey=f7cd9e34cec45ab16fa8240fea00b0b7"
     var uvUrl = "";
     var lat = "";
     var lon = "";
@@ -49,7 +49,7 @@ function currentWeatherData(city) {
 
         var wicon = citySearched.weather[0].icon
         console.log("wicon: ",wicon);
-        var iconUrl = "http://openweathermap.org/img/w/" + wicon + ".png";
+        var iconUrl = "https://openweathermap.org/img/w/" + wicon + ".png";
         currentIcon.attr("src",iconUrl);
         currentIcon.attr("alt","Weather Icon");
 
@@ -57,7 +57,7 @@ function currentWeatherData(city) {
         lat = citySearched.coord.lat;
         lon = citySearched.coord.lon;
 
-        uvUrl = "http://api.openweathermap.org/data/2.5/uvi?&lat=" + lat + "&lon=" + lon + "&cnt=1&appid=f7cd9e34cec45ab16fa8240fea00b0b7";
+        uvUrl = "https://api.openweathermap.org/data/2.5/uvi?&lat=" + lat + "&lon=" + lon + "&cnt=1&appid=f7cd9e34cec45ab16fa8240fea00b0b7";
 
         $("#current-weather").append(currentCity);
         $("#current-weather").append(currentIcon);
@@ -80,7 +80,7 @@ function currentWeatherData(city) {
 
 // getting the 5 day forecast
 function forecastWeather(city){
-var forecastUrl = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=f7cd9e34cec45ab16fa8240fea00b0b7&units=metric";
+var forecastUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=f7cd9e34cec45ab16fa8240fea00b0b7&units=metric";
 var forecastObjectIndexEachDay =[0,7,15,23,31];
 $(".future-weather").empty();
 $.ajax({
@@ -102,7 +102,7 @@ $.ajax({
         forecastDate.text(dt);
 
         var wicon = citySearched.list[forecastObjectIndexEachDay[i]].weather[0].icon
-        var iconUrl = "http://openweathermap.org/img/w/" + wicon + ".png";
+        var iconUrl = "https://openweathermap.org/img/w/" + wicon + ".png";
 
         forecastIcon.attr("src",iconUrl);
         forecastIcon.attr("alt","Weather Icon");
