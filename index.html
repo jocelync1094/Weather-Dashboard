@@ -14,7 +14,7 @@
 
 <body>
     <header>
-        <nav class="navbar sticky-top navbar-dark bg-dark">
+        <nav class="navbar sticky-top navbar-dark bg-dark" style="margin-bottom:20px">
             <a class="navbar-brand navbar-text" href="#" style="margin:0 auto">Weather Dashboard</a>
         </nav>
     </header>
@@ -25,6 +25,7 @@
                     <input class="form-control mr-sm-2 city-input" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
+                <div class="list-group"></div>
             </div>
             <div class="col-md-8" id="forecast-column">
                 <div class="row">
@@ -34,11 +35,11 @@
                     <div class = "col-md-12" id="fivedayheader"></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-2 day0"></div>
-                    <div class="col-md-2 day1"></div>
-                    <div class="col-md-2 day2"></div>
-                    <div class="col-md-2 day3"></div>
-                    <div class="col-md-2 day4"></div>
+                    <div class="col-md-2 day0 future-weather"></div>
+                    <div class="col-md-2 day1 future-weather"></div>
+                    <div class="col-md-2 day2 future-weather"></div>
+                    <div class="col-md-2 day3 future-weather"></div>
+                    <div class="col-md-2 day4 future-weather"></div>
                 </div>
             </div>
         </div>
